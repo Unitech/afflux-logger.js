@@ -46,6 +46,7 @@ Logger.init({
     ip : '127.0.0.1',
     remote : true
 });
+```
 
 other.js :
 
