@@ -30,6 +30,7 @@ If you want to use the same storage key (also a route with Messagebus.js):
 ```javascript
 var log = require('MBClient').getLogger('user:registration');
 
+// Will send { event : 'user:registration', msg : 'User registered'}
 log({msg : 'User registered'});
 ```
 
@@ -40,7 +41,8 @@ If you want to throw custom events (user:signup for example) :
 ```javascript
 var log = require('MBClient').getCustomLogger();
 
-log('user:signup', {msg : 'User alex registered'});
+// Will send { event : 'user:signup', msg : { dt : 'User alex registered' } }
+log('user:signup', {dt : 'User alex registered'});
 ```
 
 ## Example
