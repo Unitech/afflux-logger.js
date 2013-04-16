@@ -1,6 +1,6 @@
 # Logger client for MessageBus.js
 
-For the server : https://github.com/Alexandre-Strzelewicz/MessageBus.js
+- For the server MessageBus.js server: https://github.com/Alexandre-Strzelewicz/MessageBus.js
 
 ## Options
 
@@ -23,15 +23,29 @@ Logger.init({
 
 ### Usage
 
+#### Same event logger (debug like)
+
+If you want to use the same storage key (also a route with Messagebus.js):
+
 ```javascript
 var log = require('MBClient').getLogger('user:registration');
 
 log({msg : 'User registered'});
 ```
 
+#### Custom events
+
+If you want to throw custom events (user:signup for example) :
+
+```javascript
+var log = require('MBClient').getCustomLogger();
+
+log('user:signup', {msg : 'User alex registered'});
+```
+
 ## Example
 
-- example in examples/client.js
+- example in examples/client.js and in test/
 
 or : 
 
