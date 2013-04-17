@@ -1,5 +1,5 @@
 {
-    "name": "MBClient",
+    "name": "afflux-client",
     "version": "0.0.1",
     "description" : "Logger client for MessageBus.js log server",
     "author" : {

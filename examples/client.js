@@ -9,7 +9,7 @@
 var MBClient = require('..');
 
 MBClient.init({
-    port : 9995,
+    port : 3044,
     ip : '127.0.0.1',
     remote : true,
     display : true

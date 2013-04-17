@@ -10,29 +10,14 @@
 var Logger = require('MBClient');
 
 Logger.init({
-   // Port of the MessageBus.js server
-   port : 9995,
-   // IP adress of the MessageBus.js server
-   ip : '127.0.0.1',
-   // Do the log should send data to MessageBus.js
-   remote : true,
-   // Display log messages ? (for debug)
-   display : true
+   port : 3044,      // Port of the MessageBus.js server   
+   ip : '127.0.0.1', // IP adress of the MessageBus.js server
+   remote : true,    // Do the log should send data to MessageBus.js
+   display : true    // Display log messages ? (for debug)
 });
 ```
 
 ### Usage
-
-#### Same event logger (debug like)
-
-If you want to use the same storage key (also a route with Messagebus.js):
-
-```javascript
-var log = require('MBClient').getLogger('user:registration');
-
-// Will send { event : 'user:registration', msg : 'User registered'}
-log({msg : 'User registered'});
-```
 
 #### Custom events
 
@@ -43,6 +28,17 @@ var log = require('MBClient').getCustomLogger();
 
 // Will send { event : 'user:signup', msg : { dt : 'User alex registered' } }
 log('user:signup', {dt : 'User alex registered'});
+```
+
+#### Same event logger (debug like)
+
+If you want to use the same storage key (also a route with Messagebus.js):
+
+```javascript
+var log = require('MBClient').getLogger('user:registration');
+
+// Will send { event : 'user:registration', msg : 'User registered'}
+log({msg : 'User registered'});
 ```
 
 ## Example
