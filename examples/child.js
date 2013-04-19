@@ -1,5 +1,5 @@
 
-var log = require('..').getLogger('api:user');
+var log = require('..').getLogger('forward:user');
 
 setInterval(function() {
     log({username : 'toot', pass : 'hehe'});

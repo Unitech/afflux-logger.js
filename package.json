@@ -1,7 +1,7 @@
 {
-    "name": "afflux-client",
-    "version": "0.0.1",
-    "description" : "Logger client for MessageBus.js log server",
+    "name": "afflux-logger",
+    "version": "0.0.2",
+    "description" : "Logger client for afflux",
     "author" : {
 	"name" : "Strzelewicz Alexandre",
 	"email" : "strzelewicz.alexandre@gmail.com"
@@ -29,7 +29,7 @@
     "readmeFilename": "README.md",
     "repository": {
 	"type": "git",
-	"url": "git://github.com/Alexandre-Strzelewicz/MBClient.git"
+	"url": "git://github.com/Alexandre-Strzelewicz/afflux-logger.js.git"
     },
     "license": "MIT"
 }

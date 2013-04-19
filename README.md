@@ -7,7 +7,7 @@ Logger for server side applications, send events and custom message to afflux-se
 ### Init
 
 ```javascript
-var Logger = require('afflux-client');
+var Logger = require('afflux-logger');
 
 Logger.init({
    port : 3044,      // Port of the MessageBus.js server   
@@ -24,7 +24,7 @@ Logger.init({
 If you want to throw custom events (user:signup for example) :
 
 ```javascript
-var log = require('afflux-client').getCustomLogger();
+var log = require('afflux-logger').getCustomLogger();
 
 // Will send { event : 'user:signup', msg : { dt : 'User alex registered' } }
 log('user:signup', {dt : 'User alex registered'});
@@ -35,7 +35,7 @@ log('user:signup', {dt : 'User alex registered'});
 If you want to use the same storage key (also a route with Messagebus.js):
 
 ```javascript
-var log = require('afflux-client').getLogger('user:registration');
+var log = require('afflux-logger').getLogger('user:registration');
 
 // Will send { event : 'user:registration', msg : 'User registered'}
 log({msg : 'User registered'});
@@ -51,7 +51,7 @@ app.js :
 
 ```javascript
 // In main file init the logger
-var Logger = require('afflux-client');
+var Logger = require('afflux-logger');
 
 Logger.init({
     port : 9995,
@@ -65,7 +65,7 @@ other.js :
 ```javascript
 // When you creates a logger replace MAIN by the name of your logger
 // like you do with debug module
-var log = require('afflux-client').getLogger('MAIN');
+var log = require('afflux-logger').getLogger('MAIN');
 
 // Example
 setInterval(function() {
