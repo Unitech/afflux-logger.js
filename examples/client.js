@@ -9,10 +9,17 @@
 var MBClient = require('..');
 
 MBClient.init({
-    port : 3044,
+    port : 40356,
     ip : '127.0.0.1',
     remote : true,
     display : true
 });
 
-require('./child.js');
+
+var log = require('..').getLogger('forward:user');
+
+setInterval(function() {
+    log({username : 'toot', pass : 'hehe'});
+}, 1000);
+
+
