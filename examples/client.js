@@ -17,6 +17,18 @@ MBClient.init({
 
 
 var log = require('..').getLogger('forward:user');
+var customLog = require('..').getCustomLogger();
+var prefixedLog = require('..').getPrefixedLogger('forward');
+
+setInterval(function() {
+    customLog('bla:user', {data : true});
+}, 1000);
+
+
+setInterval(function() {
+    prefixedLog('user', {data : true});
+}, 1000);
+
 
 setInterval(function() {
     log({username : 'toot', pass : 'hehe'});

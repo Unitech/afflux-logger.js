@@ -1,6 +1,6 @@
 {
     "name": "afflux-logger",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "description" : "Logger client for afflux",
     "author" : {
 	"name" : "Strzelewicz Alexandre",
