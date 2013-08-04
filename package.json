@@ -1,35 +1,41 @@
 {
-    "name": "afflux-logger",
-    "version": "0.0.4",
-    "description" : "Logger client for afflux",
-    "author" : {
-	"name" : "Strzelewicz Alexandre",
-	"email" : "strzelewicz.alexandre@gmail.com"
-    },
-    "keywords" : [
-	"logging",
-	"logman",
-	"logger",
-	"log",
-	"realtime",
-	"messagebus",
-	"axon"
-    ],
-    "main": "index.js",
-    "dependencies" : {
-	"axon" : "*"
-    },
-    "devDependencies" : {
-	"mocha" : "*",
-	"should" : "*"
-    },
-    "engines": {
-	"node": "*"
-    },
-    "readmeFilename": "README.md",
-    "repository": {
-	"type": "git",
-	"url": "git://github.com/Alexandre-Strzelewicz/afflux-logger.js.git"
-    },
-    "license": "MIT"
+  "name": "afflux-logger",
+  "version": "0.0.4",
+  "description": "Logger client for afflux",
+  "author": {
+    "name": "Strzelewicz Alexandre",
+    "email": "strzelewicz.alexandre@gmail.com"
+  },
+  "keywords": [
+    "logging",
+    "logman",
+    "logger",
+    "log",
+    "realtime",
+    "messagebus",
+    "axon"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "axon": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Alexandre-Strzelewicz/afflux-logger.js.git"
+  },
+  "license": "MIT",
+  "readme": "# Logger client for afflux-server.js\n\nLogger for server side applications, send events and custom message to afflux-server.js\n\n## Options\n\n### Init\n\n```javascript\nvar Logger = require('afflux-logger');\n\nLogger.init({\n   port : 3044,      // Port of the MessageBus.js server   \n   ip : '127.0.0.1', // IP adress of the MessageBus.js server\n   remote : true,    // Do the log should send data to MessageBus.js\n   display : true    // Display log messages ? (for debug)\n});\n```\n\n### Usage\n\n#### Custom events\n\nIf you want to throw custom events (user:signup for example) :\n\n```javascript\nvar log = require('afflux-logger').getCustomLogger();\n\n// Will send { event : 'user:signup', msg : { dt : 'User alex registered' } }\nlog('user:signup', {dt : 'User alex registered'});\n```\n\n#### Same event logger (debug like)\n\nIf you want to use the same storage key (also a route with Messagebus.js):\n\n```javascript\nvar log = require('afflux-logger').getLogger('user:registration');\n\n// Will send { event : 'user:registration', msg : 'User registered'}\nlog({msg : 'User registered'});\n```\n\n## Example\n\n- example in examples/client.js and in test/\n\nor : \n\napp.js :\n\n```javascript\n// In main file init the logger\nvar Logger = require('afflux-logger');\n\nLogger.init({\n    port : 9995,\n    ip : '127.0.0.1',\n    remote : true\n});\n```\n\nother.js :\n\n```javascript\n// When you creates a logger replace MAIN by the name of your logger\n// like you do with debug module\nvar log = require('afflux-logger').getLogger('MAIN');\n\n// Example\nsetInterval(function() {\n    log({my : 'message'});\n}, 300);\n```\n\n# License\n\n(The MIT License)\n\nCopyright (c) 2013 Wiredcraft <opensource@wiredcraft.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
+  "bugs": {
+    "url": "https://github.com/Alexandre-Strzelewicz/afflux-logger.js/issues"
+  },
+  "_id": "afflux-logger@0.0.4",
+  "_from": "afflux-logger@*"
 }
