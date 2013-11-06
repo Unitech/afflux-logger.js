@@ -1,35 +1,35 @@
 {
-    "name": "aflux",
-    "version": "0.0.4",
-    "description" : "Logger client for logman",
-    "author" : {
-	"name" : "Strzelewicz Alexandre",
-	"email" : "strzelewicz.alexandre@gmail.com"
-    },
-    "keywords" : [
-	"logging",
-	"logman",
-	"logger",
-	"log",
-	"realtime",
-	"messagebus",
-	"axon"
-    ],
-    "main": "index.js",
-    "dependencies" : {
-	"axon" : "*"
-    },
-    "devDependencies" : {
-	"mocha" : "*",
-	"should" : "*"
-    },
-    "engines": {
-	"node": "*"
-    },
-    "readmeFilename": "README.md",
-    "repository": {
-	"type": "git",
-	"url": "git://github.com/Alexandre-Strzelewicz/afflux-logger.js.git"
-    },
-    "license": "MIT"
+  "name": "aflux",
+  "version": "0.0.4",
+  "description" : "Logger client for logman",
+  "author" : {
+    "name" : "Strzelewicz Alexandre",
+    "email" : "strzelewicz.alexandre@gmail.com"
+  },
+  "keywords" : [
+    "logging",
+    "logman",
+    "logger",
+    "log",
+    "realtime",
+    "messagebus",
+    "axon"
+  ],
+  "main": "index.js",
+  "dependencies" : {
+    "axon" : "*"
+  },
+  "devDependencies" : {
+    "mocha" : "*",
+    "should" : "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Alexandre-Strzelewicz/afflux-logger.js.git"
+  },
+  "license": "MIT"
 }
