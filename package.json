@@ -1,7 +1,7 @@
 {
-    "name": "afflux-logger",
+    "name": "aflux",
     "version": "0.0.4",
-    "description" : "Logger client for afflux",
+    "description" : "Logger client for logman",
     "author" : {
 	"name" : "Strzelewicz Alexandre",
 	"email" : "strzelewicz.alexandre@gmail.com"
